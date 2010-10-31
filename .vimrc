@@ -109,6 +109,9 @@ map <F5> :tabp<CR>
 " map <F6> :tabn<CR>
 map <F6> :tabnew<CR>
 
+colorscheme default " vim
+" colorscheme desert " gvim
+
 " ESC키를 누르면 한글 모드가 해제
 " 입력모드에서 이전 언어 설정 모드 유지?
 inoremap <ESC> <ESC>:set imdisable<CR>
