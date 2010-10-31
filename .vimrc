@@ -54,7 +54,7 @@ set scrolloff=2
 " colors sdh
 
 " 76번째 칸을 넘어가면 자동 줄바꿈
-set textwidth=76
+" set textwidth=76
 
 " 자동 줄바꿈 안함
 " set nowrap
