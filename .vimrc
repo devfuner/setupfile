@@ -142,3 +142,19 @@ au GUIEnter * winsize 90 50
 au GUIEnter * winpos 550 0
 endif
 
+
+ 
+function! InsertTabWrapper()
+        let col = col('.') - 1
+            if !col || getline('.')[col-1]!~'\k'
+                    return "\<TAB>"
+                        else
+                            if pumvisible()
+            return "\<C-N>"
+                else
+                        return "\<C-N>\<C-P>"
+                                end
+                                    endif
+                                        endfunction
+                                        inoremap <TAB> <C-R>=InsertTabWrapper()<CR>
+                                        inoremap <EXPR> <CR> pumvisible() ? "<C-Y><CR>" : "<CR>"
